@@ -1,0 +1,4 @@
+cron:
+- description: "update check"
+  url: /deffer
+  schedule: every 3 hours

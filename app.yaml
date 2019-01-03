@@ -1,0 +1,22 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  script: main.app
+  login: admin
+- url: /deffer
+  script: main.app
+  login: admin
+
+libraries:
+- name: ssl
+  version: latest
+
+builtins:
+- deferred: on
+
+includes:
+- secret.yaml
+

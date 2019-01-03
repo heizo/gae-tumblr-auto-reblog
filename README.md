@@ -21,6 +21,15 @@ $ pip install -t lib flask pytumblr python-dateutil pytz requests-toolbelt
 ```bash
 $ cp secret.yaml.sample secret.yaml
 ```
+secret.yaml
+```yaml
+env_variables:
+  BLOG_NAME: "YOUR BLOG NAME"
+  CONSUMER_KEY: "YOUR CONSUMER KEY"
+  CONSUMER_SECRET: "YOUR CONSUMER SECRET"
+  OAUTH_TOKEN: "YOUR OAUTH TOKEN"
+  OAUTH_SECRET: "YOUR OAUTH SECRET"
+```
 Add your blog name, consumer_key, consumer_secret, oauth_token and oauth_secret.  
 https://www.tumblr.com/oauth/apps  
 https://github.com/stigok/node-oauth-tumblr-example
@@ -34,8 +43,16 @@ https://github.com/stigok/node-oauth-tumblr-example
 ### settings.py
 - MIN_QUEUE: Run reblog task if the number of queues is less than MIN_QUEUE.
 - ADD_QUEUE: Number of posts in a single reblog task.
-- DAYS_BEFORE: Reblog posts are older than DAYS_BEFORE from now.
+- DAYS_BEFORE: Reblog posts are older than DAYS_BEFORE days from now.
 - MIN_NOTE: Reblog posts have more than MIN_NOTE notes.
+### cron.yaml
+```yaml
+cron:
+- description: "update check"
+  url: /deffer
+  schedule: every 3 hours
+```
+check the queue every 3 hours.
 
 ## Deploy
 ```bash
@@ -43,6 +60,9 @@ $ gcloud app deploy
 $ gcloud app deploy cron.yaml
 $ gcloud app deploy queue.yaml
 ```
+
+## Issues
+Need a lot of past posts.
 
 ## Reblog forever!
 

@@ -1,0 +1,16 @@
+#
+__pycache__
+*.py[co]
+.python-version
+.pylintrc
+.env
+.venv
+env
+venv
+lib
+
+.git
+.vscode
+.DS_Store
+
+secret.yaml
