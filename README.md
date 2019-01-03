@@ -47,7 +47,7 @@ https://www.tumblr.com/oauth/apps
 ### cron.yaml
 ```yaml
 cron:
-- description: "update check"
+- description: "queue check"
   url: /deffer
   schedule: every 3 hours
 ```
