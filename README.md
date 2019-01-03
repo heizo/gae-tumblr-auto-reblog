@@ -31,13 +31,12 @@ env_variables:
   OAUTH_SECRET: "YOUR OAUTH SECRET"
 ```
 Add your blog name, consumer_key, consumer_secret, oauth_token and oauth_secret.  
-https://www.tumblr.com/oauth/apps  
-https://github.com/stigok/node-oauth-tumblr-example
+https://www.tumblr.com/oauth/apps
 
 ## Configuration
 ### Google App Engine
 - Create a project.
-### tumblr
+### Tumblr
 - Enable automatically publish a queued post.  
 (e.g. 5 times a day between 12 am and 12 am)
 ### settings.py
