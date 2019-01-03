@@ -59,7 +59,7 @@ $ gcloud app deploy
 $ gcloud app deploy cron.yaml
 $ gcloud app deploy queue.yaml
 ```
-
+
 ## Issues
 Need a lot of past posts.
 
