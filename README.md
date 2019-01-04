@@ -51,7 +51,7 @@ cron:
   url: /deffer
   schedule: every 3 hours
 ```
-check the queue every 3 hours.
+(e.g. check the queue every 3 hours.)
 
 ## Deploy
 ```bash
